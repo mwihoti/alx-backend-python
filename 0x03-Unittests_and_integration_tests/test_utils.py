@@ -8,6 +8,7 @@ from parameterized import parameterized
 from utils import (access_nested_map, get_json, memoize)
 from unittest.mock import patch
 
+
 class TestAccessNestedMap(unittest.TestCase):
 
     """
@@ -56,11 +57,12 @@ class TestGetJson(unittest.TestCase):
         mock.assert_called_once()
         patcher.stop()
 
+
 class TestMemoize(unittest.TestCase):
     """
     Defines class TestMoize
     """
-    
+
     def test_memoize():
         """
          Tests the function when calling a_property twice,
@@ -80,4 +82,4 @@ class TestMemoize(unittest.TestCase):
             test_class = TestClass()
             test_class.a_property()
             test_class.a_property()
-            mock.assert_called_once()           
+            mock.assert_called_once()
